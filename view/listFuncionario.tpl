@@ -4,14 +4,16 @@
 
 <hr/>
 
-<form name="formCadFuncionario" method="GET">
+<br><div id="ferramentasF">
 
-    <input type="button" value="Novo Funcionario" onclick="win('cadFuncionario.php',290,420);">
-    <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
+    <form name="frmFerrramentaF" method="GET">
+        <input type="button" value="Novo Funcionario" onclick="win('cadFuncionario.php',290,420);">
+        <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
+    </form>
 
-</form><br>
+</div><br>
 
-<form name="fmlistafunc">
+<form name="frmTabelaF">
 
     <table border ="1">
         <tr>
@@ -22,15 +24,15 @@
             <td>Ações</td>        
         </tr>
         {foreach from=$lista item=row}
-        <tr>
-            <td>{$row.id}</td> 
-            <td>{$row.nome_funcionario}</td>
-            <td>{$row.celular}</td>
-            <td>{$row.email}</td>
-            <td><a href="#" onclick="win('editFuncionario.php?edit={$row.id}',390,250)">Edit</a> | 
-                <a href="?del={$row.id}">Del</a>
-            </td>
-        </tr>
+            <tr>
+                <td>{$row.id}</td> 
+                <td>{$row.nome_funcionario}</td>
+                <td>{$row.celular}</td>
+                <td>{$row.email}</td>
+                <td><a href="#" onclick="win('editFuncionario.php?edit={$row.id}',390,250)">Edit</a> | 
+                    <a href="?del={$row.id}">Del</a>
+                </td>
+            </tr>
         {/foreach}
     </table>
 </form>

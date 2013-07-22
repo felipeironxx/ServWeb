@@ -6,18 +6,15 @@
 
 <br><div id="ferramentasE">
 
-    <form name="frmFerramentasE" method="GET">
+    <form name="frmFerramentaE" method="GET">
         <input type="button" value="Nova Empresa" onclick="win('cadEmpresa.php',640,360)">
         <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
         <input type="button" value="Exibir Funcionarios das empresas" onclick="window.location.href='listFuncEmpr.php'"> 
     </form>
 
-</div>
-
-<br>
+</div><br>
 
 <form name="frmTabelaE">
-
     <table border ="1">
         <tr>
             <td>Codigo da Empresa</td>  

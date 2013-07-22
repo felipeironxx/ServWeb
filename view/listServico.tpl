@@ -4,11 +4,33 @@
 
 <hr/>
 
-<form name="formCadServico">
+<br><div id="ferramentasS">
 
-    <input type="button" value="Novo Serviço" onclick="win('cadServico.php',600,420);">
+    <form name="frmFerrramentaS" method="GET">
 
-    <br>
+        <input type="button" value="Novo Serviço" onclick="win('cadServico.php',600,420);">
+
+        Pesquisar por: <select name="selColunasServico">
+            <option value="id">Código</option>
+            <option value="id">Código</option>
+            <option value="id">Código</option>
+            <option value="id">Código</option>
+            <option value="id">Código</option>
+            <option value="id">Código</option>  
+        </select>
+        <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
+
+        <br><br>
+        Exibir somente os:<br>  
+        Não Concluidos<input type="radio" name="con">
+        Conluidos     <input type="radio" name="con">
+        Todos         <input type="radio" name="con">
+
+    </form>
+
+</div><br>
+
+<form name="frmTabelaS">
 
     <table border ="1">
         <tr>
