@@ -110,6 +110,10 @@ h1{
 }
 
 h2{
+    text-align: center;
+}
+
+h2{
     line-height: 195%;
     font-weight: bold;
     display: block;

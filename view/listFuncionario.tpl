@@ -1,14 +1,15 @@
 {include file="view/head.tpl"}
 
-<h2>Lista de Funcionarios Cadastrados</h2>
+<h2>Funcionarios</h2>
 
 <hr/>
 
-<form name="formCadFuncionario">
+<form name="formCadFuncionario" method="GET">
 
     <input type="button" value="Novo Funcionario" onclick="win('cadFuncionario.php',290,420);">
+    <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
 
-</form>
+</form><br>
 
 <form name="fmlistafunc">
 

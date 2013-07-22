@@ -1,6 +1,6 @@
 {include file="view/head.tpl"}
 
-<h2>Listagem dos Funcionarios das Empresas</h2>
+<h2>Funcionarios das Empresas</h2>
 
 <hr/><br>
 
@@ -8,7 +8,7 @@
 
     <input type="button" value="Novo Funcionario" onclick="win('cadFuncEmpr.php',290,420)">
 
-</form>
+</form><br>
 
 <form name="formSelFuncEmpr">
 

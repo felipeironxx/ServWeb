@@ -1,12 +1,14 @@
 {include file="view/head.tpl"}
 
-<h1>Serviços</h1>
+<h2>Serviços</h2>
+
+<hr/>
 
 <form name="formCadServico">
 
     <input type="button" value="Novo Serviço" onclick="win('cadServico.php',600,420);">
 
-    <hr/><br>
+    <br>
 
     <table border ="1">
         <tr>
