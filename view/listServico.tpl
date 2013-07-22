@@ -12,19 +12,10 @@
 
         Pesquisar por: <select name="selColunasServico">
             <option value="id">Código</option>
-            <option value="id">Código</option>
-            <option value="id">Código</option>
-            <option value="id">Código</option>
-            <option value="id">Código</option>
-            <option value="id">Código</option>  
+            <option value="id">Funcionario que Anotou</option>
+            <option value="id">Solicitante</option>
         </select>
         <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
-
-        <br><br>
-        Exibir somente os:<br>  
-        Não Concluidos<input type="radio" name="con">
-        Conluidos     <input type="radio" name="con">
-        Todos         <input type="radio" name="con">
 
     </form>
 
@@ -32,6 +23,11 @@
 
 <form name="frmTabelaS">
 
+    Exibir somente os:<br>  
+    Não Concluidos<input type="radio" name="con" value="N">
+    Conluidos     <input type="radio" name="con" value="S">
+    Todos         <input type="radio" name="con" value="T">
+    
     <table border ="1">
         <tr>
             <td>Codigo do servico</td> 

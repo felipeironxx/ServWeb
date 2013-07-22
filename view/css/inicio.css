@@ -120,3 +120,7 @@ h2{
     padding-left:1px;
     border-bottom:1px solid #BBBBBB;
 }
+
+table{
+    width: 100%;
+}
