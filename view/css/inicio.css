@@ -124,3 +124,7 @@ h2{
 table{
     width: 100%;
 }
+
+.text-error{
+    color: red;
+}

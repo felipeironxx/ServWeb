@@ -242,7 +242,7 @@ class Usuario extends aUsuario {
 // Fim da verificação, retorna true
             return true;
         } else {
-            $this->erro = 'Usuário inválido';
+            $this->erro = 'Usuário/Senha inválido';
             return false;
         }
     }

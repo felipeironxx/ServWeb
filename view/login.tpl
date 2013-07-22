@@ -9,26 +9,12 @@
         <div id="corpo" align="center">
             <h1>Login</h1>
             <form name="login" method="post">
-                <table width="400" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td><p>{$erro}</p></td>
-                    </tr>
-                    <tr> 
-                        <td>Login:</td>
-                        <td> <input name="login" type="text" id="login"></td>
-                    </tr>
-                    <tr> 
-                        <td>Senha:</td>
-                        <td><input name="senha" type="password" id="senha"></td>
-                    </tr>
-                    <tr> 
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr> 
-                        <td> <input name="entrar" type="submit" id="entrar" value="Entrar"> </td>
-                    </tr>
-                </table>
+                <span class="text-error">{$erro}</span><br>
+                Login:
+                <input name="login" type="text" id="login"><br> 
+                Senha:
+                <input name="senha" type="password" id="senha"><br><br>
+                <input name="entrar" type="submit" id="entrar" value="Entrar"> 
             </form>
         </div>
     </body>
