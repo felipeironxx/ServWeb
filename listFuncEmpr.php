@@ -15,7 +15,7 @@ $sm->assign('lista', $cfe->selectInner());
 if (isset($_GET['filtrar'])) {
     $id = $_GET['filtrar'];
     
-    $sm->assign('lista', $cfe->selectInner("and id_empresar = {$id}"));
+    $sm->assign('lista', $cfe->selectInner("and id_empresa = {$id}"));
 }
 
 if(isset($_GET['del'])){
