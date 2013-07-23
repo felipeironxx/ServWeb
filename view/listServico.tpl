@@ -12,9 +12,9 @@
 
         Pesquisar por: <select name="selColunasServico">
             <option value="id">Código</option>
-            <option value="nome_func_realizou">Funcionario que Anotou</option>
-            <option value="">Solicitante</option>
-            <option value="id">Data Solicitação</option>
+            <option value="nome_funcionario">Funcionario que Anotou</option>
+            <option value="nome_empresa">Solicitante</option>
+            <option value="dt_solicitacao">Data Solicitação</option>
         </select>
         <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
 
@@ -25,9 +25,9 @@
 <form name="frmTabelaS" method="POST">
 
     Exibir somente os:<select name="selConcluidos">
-        <option value="S">Conluidos</option>
-        <option value="N">Não Conluidos</option>
         <option value="T">Todos</option>
+        <option value="S">Conluidos</option>
+        <option value="N">Não Concluidos</option>
     </select><input type="submit" name="exibir" value="Exibir">
 
     <table border ="1">
