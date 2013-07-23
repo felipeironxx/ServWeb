@@ -29,7 +29,7 @@ class aServico extends mServico {
                                         inner join funcionario on (funcionario.id = servico.id_func_anotou)
                                         inner join empresa on (empresa.id = servico.id_empresa) 
                                         inner join func_empr on (func_empr.id = servico.id_func_empr) 
-                                 where 1=1 
+                                 where 1=1 %s
                                  union all 
                                  select servico.*, date_format(dt_solicitacao, '%s') as dt_solicitacao,
                                         date_format(dt_hr_comeco, '%s') as dt_hr_comeco,
@@ -38,7 +38,7 @@ class aServico extends mServico {
                                         from servico 
                                         inner join funcionario on (funcionario.id = servico.id_func_anotou)
                                         inner join cliente on (cliente.id = servico.id_cliente) 
-                                 where 1=1 order by id";
+                                 where 1=1 %s order by id";
 
     public function insert() {
         try {
@@ -96,10 +96,10 @@ class aServico extends mServico {
         }
     }
 
-    public function selectInner($where = '', $order = '', $rquery = false) {
+    public function selectInner($where = '', $where = '', $rquery = false) {
         try {
-            $sql = sprintf($this->sqlSelectInner, '%d/%m/%Y', '%d/%m/%Y %H:%i:%s', '%d/%m/%Y %H:%i:%s', 
-                                                  '%d/%m/%Y', '%d/%m/%Y %H:%i:%s', '%d/%m/%Y %H:%i:%s');
+            $sql = sprintf($this->sqlSelectInner, '%d/%m/%Y', '%d/%m/%Y %H:%i:%s', '%d/%m/%Y %H:%i:%s', $where, 
+                                                  '%d/%m/%Y', '%d/%m/%Y %H:%i:%s', '%d/%m/%Y %H:%i:%s', $where);
             if ($rquery)
                 return $sql;
             else

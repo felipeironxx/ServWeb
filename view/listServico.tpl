@@ -10,10 +10,11 @@
 
         <input type="button" value="Novo Serviço" onclick="win('cadServico.php',600,420);">
 
-        Pesquisar por: <select name="selColunasServico">
+        Pesquisar por: <select name="selColunas">
             <option value="id">Código</option>
             <option value="nome_funcionario">Funcionario que Anotou</option>
-            <option value="nome_empresa">Solicitante</option>
+            <option value="nome_empresa">Solicitante - Empresa</option>
+            <option value="nome_cliente">Solicitante - Cliente</option>
             <option value="dt_solicitacao">Data Solicitação</option>
         </select>
         <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
@@ -24,7 +25,7 @@
 
 <form name="frmTabelaS" method="POST">
 
-    Exibir somente os:<select name="selConcluidos">
+    Exibir somente os:<select name="filtrarConcluidos">
         <option value="T">Todos</option>
         <option value="S">Conluidos</option>
         <option value="N">Não Concluidos</option>
