@@ -10,13 +10,16 @@ $cs = new Servico();
 
 $sm->assign('lista', $cs->selectInner());
 
+
+//Aqui faz os pesquisar por coluna!!
 if(isset($_GET['selColunas']) and isset($_GET['pesquisa'])){
     $coluna = $_GET['selColunas'];
     $pesq = $_GET['pesquisa'];
     
     $sm->assign('lista', $cs->selectInner("and '{$coluna}' LIKE '%{$pesq}%'", "and '{$coluna}' LIKE '%{$pesq}%'"));
 }
-
+//Aqui faz a filtragem de serviços concluidos e não conluidos e se 
+//caso a opção exibe todos for selecionada ele exibe todos os serviços
 if(isset($_POST['filtrarConcluidos'])) {
     $var = $_POST['filtrarConcluidos'];
     if ($var == 'T') {
