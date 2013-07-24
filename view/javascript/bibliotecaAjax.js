@@ -29,7 +29,7 @@ function tratarResposta() {
         if ( ajax.status == 200 ) 
            tratarDados(ajax.responseText);
         else
-           alert("Problema na comunicaÁ„o com o objeto XMLHttpRequest: " + ajax.statusText);
+           alert("Problema na comunica√ß√£o com o objeto XMLHttpRequest: " + ajax.statusText);
     }
 }
 
@@ -50,6 +50,6 @@ function requisicaoHTTP(tipo , url, assinc){
     if (ajax) //inciou com sucesso
         iniciaRequisicao(tipo, url, assinc);    
     else
-        alert("Seu navegador n„o possui suporte a essa aplicaÁ„o");
+        alert("Seu navegador n√£o possui suporte a essa aplica√ß√£o");
     
 }
