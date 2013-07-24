@@ -9,24 +9,30 @@ $cs = new Servico();
 $cs->setId($_GET['concluir']);
 $cs->load();
 
-if ($cs->getConluido() == 'S') {
-    
-    $cs->setId_cliente('NULL');
-    $cs->setServ_realizado($_POST['']);
-    $cs->setDtHr_realizacao($_POST['']);
-    $cs->setConluido('N');
-    $cs->update();
-    
-    $sm->assign("done", true);
-    
+$v = $cs->getId_cliente();
+if ($v == "") {
+    $v = 0;
 } else {
+    $v = 1;
+}
 
-    $v = $cs->getId_cliente();
-    if ($v == "") {
-        $v = 0;
+if ($cs->getConluido() == 'S') {
+    if ($v == 0) {
+        $cs->setId_cliente('NULL');
+        $cs->setServ_realizado($_POST['']);
+        $cs->setDtHr_realizacao($_POST['']);
+        $cs->setConluido('N');
+        $cs->update();
     } else {
-        $v = 1;
+        $cs->setId_empresa('NULL');
+        $cs->setId_func_empr('NULL');
+        $cs->setServ_realizado($_POST['']);
+        $cs->setDtHr_realizacao($_POST['']);
+        $cs->setConluido('N');
+        $cs->update();
     }
+    $sm->assign("done", true);
+} else {
 
     if ($v == 0) {
 

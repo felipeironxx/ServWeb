@@ -20,10 +20,10 @@ if (isset($_GET['selColunas']) and isset($_GET['pesquisa'])) {
         $sm->assign('lista', $cs->selectInner("and {$coluna} LIKE '%{$pesq}%'", "and id_empresa LIKE '%{$pesq}%'"));
     } else if ($coluna == 'nome_cliente') {
         $sm->assign('lista', $cs->selectInner("and id_cliente LIKE '%{$pesq}%'", "and {$coluna} LIKE '%{$pesq}%'"));
-    } else if ($coluna == 'dt_solicitacao') {
-        $pesq = $cs->dateToBr($pesq);
-        $sm->assign('lista', $cs->selectInner("and {$coluna} LIKE '%{$pesq}%'", "and {$coluna} LIKE '%{$pesq}%'"));
     } else {
+        if ($coluna == 'dt_solicitacao') {
+            $pesq = $cs->dateToUS($pesq);
+        }
         $sm->assign('lista', $cs->selectInner("and {$coluna} LIKE '%{$pesq}%'", "and {$coluna} LIKE '%{$pesq}%'"));
     }
 }
@@ -32,7 +32,8 @@ if (isset($_GET['selColunas']) and isset($_GET['pesquisa'])) {
 if (isset($_POST['filtrarConcluidos'])) {
     $var = $_POST['filtrarConcluidos'];
     if ($var == 'T') {
-        $sm->assign('lista', $cs->selectInner());
+        header('Location: listServico.php');
+        exit;
     } else {
         $sm->assign('lista', $cs->selectInner("and concluido = '{$var}'", "and concluido = '{$var}'"));
     }

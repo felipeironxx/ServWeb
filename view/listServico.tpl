@@ -54,7 +54,7 @@
                 <td>{$row.serv_solicitado} </td> 
                 <td>{$row.dt_solicitacao} </td>
                 <td align="center"><input type="checkbox" name="conc" {if $row.concluido == 'S'} checked="checked" {/if}
-                    {if $row.id_func_realizou == ''} onclick="alertas('{$row.nome_funcionario}', '{$row.concluido}')" {else}
+                    {if $row.id_func_realizou == ''} onclick="alertas('{$row.nome_func_realizou}', '{$row.concluido}')" {else}
                         onclick="win('concluir_servico.php?concluir={$row.id}',500,200);" {/if} value=""/>
                 </td>
                 <td><a href="#" {if $row.concluido == 'N'} onclick="alertas('{$row.id_func_realizou}', '{$row.concluido}')" {else} 

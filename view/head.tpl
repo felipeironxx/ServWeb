@@ -19,7 +19,7 @@
     </head>
     <body>
         <div id="corpo">
-            <div id="logout">Bem vindo {$usuario} - <a href="logout.php">Sair</a></div>
+            <div id="logout">Bem Vindo {$usuario} - <a href="logout.php">Sair</a></div>
             <h1>Piske Informática</h1>
             <div id="menu">
                 <ul>
@@ -32,9 +32,9 @@
                         </ul>
                     </li>
                     <li><a class="menu" href="listServico.php"> Serviços</a></li>
-                    <li><a class="menu" href="#"> Relatorios</a>
+                    <!--<li><a class="menu" href="#"> Relatorios</a>
                         <ul>
                             <li><a class="menu" href="relServico.php">Serviços</a></li>
-                        </ul>
+                        </ul>-->
                 </ul>
             </div>
