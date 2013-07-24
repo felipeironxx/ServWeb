@@ -11,7 +11,7 @@
         <input type="button" value="Novo Serviço" onclick="win('cadServico.php',600,420);">
 
         Pesquisar por: <select name="selColunas">
-            <option value="id">Código</option>
+            <option value="servico.id">Código</option>
             <option value="nome_funcionario">Funcionario que Anotou</option>
             <option value="nome_empresa">Solicitante - Empresa</option>
             <option value="nome_cliente">Solicitante - Cliente</option>

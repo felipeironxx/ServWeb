@@ -96,10 +96,10 @@ class aServico extends mServico {
         }
     }
 
-    public function selectInner($where = '', $where = '', $rquery = false) {
+    public function selectInner($where = '', $where2 = '', $rquery = false) {
         try {
             $sql = sprintf($this->sqlSelectInner, '%d/%m/%Y', '%d/%m/%Y %H:%i:%s', '%d/%m/%Y %H:%i:%s', $where, 
-                                                  '%d/%m/%Y', '%d/%m/%Y %H:%i:%s', '%d/%m/%Y %H:%i:%s', $where);
+                                                  '%d/%m/%Y', '%d/%m/%Y %H:%i:%s', '%d/%m/%Y %H:%i:%s', $where2);
             if ($rquery)
                 return $sql;
             else
