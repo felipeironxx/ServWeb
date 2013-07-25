@@ -170,11 +170,10 @@ function valida_cpf(cpf){
 
 function valida_cnpj(cnpj){
     
+    cnpj = cnpj.replace(/[^\d]+/g,'');
+    
     var numeros, digitos, soma, i, resultado, pos, tamanho, digitos_iguais;
     digitos_iguais = 1;
-    cnpj = remove(cnpj, ".");
-    cnpj = remove(cnpj, "/");
-    cnpj = remove(cnpj, "-");
     if (cnpj.length < 14 && cnpj.length < 15)
         return false;
     for (i = 0; i < cnpj.length - 1; i++)
