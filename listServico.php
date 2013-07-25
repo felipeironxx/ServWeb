@@ -8,8 +8,9 @@ $sm->assign('usuario', $_SESSION['usuario_0'][nome]);
 
 $cs = new Servico();
 
-$sm->assign('lista', $cs->selectInner());
-
+if (!isset($_GET['selColunas']) and !isset($_GET['pesquisa']) and !isset($_POST['filtrarConcuidos'])) {
+    $sm->assign('lista', $cs->selectInner());
+}
 
 //Aqui faz os pesquisar por coluna!!
 if (isset($_GET['selColunas']) and isset($_GET['pesquisa'])) {
@@ -21,7 +22,7 @@ if (isset($_GET['selColunas']) and isset($_GET['pesquisa'])) {
     } else if ($coluna == 'nome_cliente') {
         $sm->assign('lista', $cs->selectInner("and id_cliente LIKE '%{$pesq}%'", "and {$coluna} LIKE '%{$pesq}%'"));
     } else {
-        if ($coluna == 'dt_solicitacao') {
+        if ($coluna == 'dt_solicitacao') {//se caso for por data de solicitação, ele passa a data para o formato US para fazer o select
             $pesq = $cs->dateToUS($pesq);
         }
         $sm->assign('lista', $cs->selectInner("and {$coluna} LIKE '%{$pesq}%'", "and {$coluna} LIKE '%{$pesq}%'"));

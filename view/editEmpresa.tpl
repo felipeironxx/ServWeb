@@ -4,8 +4,8 @@
 
 <form name="edit" id="edit" method="post" enctype="multipart/form-data">
 
-    Nome do Empresa:              <input type="text" name="nEmpresa" id="nEmpresa" size="40" value="{$e.nEmpresa}"><br>
-    CNPJ:                         <input type="text" name="cnpj" id="cnpj" size="16" value="{$e.cnpj}">
+    Nome:                         <input type="text" name="nEmpresa" id="nEmpresa" size="40" value="{$e.nEmpresa}"><br>
+    CNPJ:                         <input type="text" name="cnpj" id="cnpj" size="16" value="{$e.cnpj}" maxlength="18" onblur="validaCNPJ();" onkeypress="formataCNPJ(document.cad.cnpj);">
     Inscriçao Estadual:           <input type="text" name="ie" id="ie" size="18" value="{$e.ie}"><br>
     Nome do Aplicativo PAF-ECF:   <input type="text" name="nAplicativo" id="nAplicativo" size="40" value="{$e.nAplicativo}"><br>
     Serial do Aplicativo PAF-ECF: <input type="text" name="serial_ap" id="serial_ap" size="40" value="{$e.serial_ap}"><br>
