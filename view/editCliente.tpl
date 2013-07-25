@@ -6,7 +6,7 @@
     <form name="edit" id="edit" method="post">
 
         Nome do Cliente:              <input type="text" name="nCliente" id="nCliente" size="40" value="{$e.nCliente}"><br>
-        CPF:                          <input type="text" name="cpf" id="cpf" size="16" value="{$e.cpf}">
+        CPF:                          <input type="text" name="cpf" id="cpf" size="16" value="{$e.cpf}" onblur="valida();" onkeypress="formataCPF(document.cad.cpf);">
         RG:                           <input type="text" name="rg" id="rg" size="18" value="{$e.rg}"><br>
         Rua:                          <input type="text" name="ruaC" id="ruaC" size="40" value="{$e.ruaC}">
         Numero:                       <input type="text" name="numC" id="numC" size="10" value="{$e.numC}"><br>
