@@ -1,6 +1,9 @@
-function deletar(){
-    confirm("Deseja realmente deletar?");
-    window.location.href='listServico.php';
+function deletar(id){
+    if(confirm("Deseja realmente deletar?")){
+        window.location.href='?del=' + id;
+    }else{
+        return false;
+    }
 }
 
 function formataTel(campo){

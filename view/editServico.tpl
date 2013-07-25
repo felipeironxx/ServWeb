@@ -51,7 +51,7 @@
 
         <input type="button" onclick="habilitar_edit_serv('{$valor}');" value="Editar"/>
         <input type="submit" value="Salvar"/>
-        <input type="button" onclick="deletar(); window.location.href='?del={$e.id}'" value="Deletar"/>
+        <input type="button" onclick="deletar({$e.id});" value="Deletar"/>
     
     </div>
 </form>
