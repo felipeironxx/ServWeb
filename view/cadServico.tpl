@@ -43,7 +43,7 @@
 
         Serviço a ser feito: <br><textarea name="servASerFeito" id="servASerFeito" rows="5" cols="70" ></textarea><br>
 
-        Data da solicitação do serviço: <input type="text" name="dataSolicitacao" id="dataSolicitacao"><br>
+        Data da solicitação do serviço: <input type="text" name="dataSolicitacao" id="dataSolicitacao" maxlength="10" onkeypress="formataData(document.cad.dataSolicitacao);"><br>
 
         <input type="submit" value="Cadastrar"/>
 </div>

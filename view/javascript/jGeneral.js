@@ -19,6 +19,32 @@ function formataTel(campo){
     }
 }
 
+function formataData(campo){
+    var dt = campo.value;
+    var tam = dt.length;
+    if(tam == 2){
+        campo.value = dt + "/";
+    }else if(tam == 5){
+        campo.value = dt + "/";
+    }
+}
+
+function formataDataHora(campo){
+    var dthr = campo.value;
+    var tam = dthr.length;
+    if(tam == 2){
+        campo.value = dthr + "/";
+    }else if(tam == 5){
+        campo.value = dthr + "/";
+    }else if(tam == 10){
+        campo.value = dthr + " ";
+    }else if(tam == 13){
+        campo.value = dthr + ":";
+    }else if(tam == 16){
+        campo.value = dthr + ":";
+    }
+}
+
 function formataCPF(campo){
     var cpf = campo.value;
     var tam = cpf.length;

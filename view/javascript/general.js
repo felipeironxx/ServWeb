@@ -16,20 +16,20 @@ function win(enderecoURL,w,h){
 function alertas(obj1, obj2){
 
     if(obj1 == ""){
-        obj1 = 1;
+        obj1 = 0.1;
     }    
     
     if(obj2 == "N"){
-        obj2 = 2;
+        obj2 = 0.2;
     } 
  
-    if(obj1 == 1 && obj2 == 2){
+    if(obj2 == 0.2 && obj1 != 0.1){
+        alert("Serviço ainda em andamento.");
+    }else if(obj1 == 0.1 && obj2 == 0.2) {
         alert("Serviço não iniciado");   
         window.location.reload();
-    }else if(obj2 == 2 && obj1 != 1){
-        alert("Serviço ainda em andamento.");
     }
-    else if(obj1 != 1 && obj2 != 2){
+    else if(obj1 != 0.1 && obj2 != 0.2){
         alert("Serviço já concluido");    
     }
 }

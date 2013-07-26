@@ -10,7 +10,7 @@
             {/foreach}
         </select><br>
 
-        Data e Hora do inicio: <input type="text" name="dt_hr_comeco" id="dt_hr_comeco" size="20"><br>
+        Data e Hora do inicio: <input type="text" name="dt_hr_comeco" id="dt_hr_comeco" size="19" maxlength="19" onkeypress="formataDataHora(document.formIniServ.dt_hr_comeco);"><br>
 
 
         <input type="submit" value="Iniciar"/>
