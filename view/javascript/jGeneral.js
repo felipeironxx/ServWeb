@@ -149,26 +149,26 @@ function habilitar_edit_serv(valor){
     
     if(valor == 0){
         
-        document.editServico.selCodFuncAnot.disabled = false;
-        document.editServico.selCodEmpr.disabled = false;
-        document.editServico.selCodFuncEmpr.disabled = false;
-        document.editServico.servASerFeito.disabled = false;
-        document.editServico.dataSolicitacao.disabled = false;
-        document.editServico.selCodFuncReal.disabled = false;
-        document.editServico.serv_realizado.disabled = false;
-        document.editServico.dt_hr_comeco.disabled = false;
-        document.editServico.dt_hr_realizacao.disabled = false;
+        document.edit.selCodFuncAnot.disabled = false;
+        document.edit.selCodEmpr.disabled = false;
+        document.edit.selCodFuncEmpr.disabled = false;
+        document.edit.servASerFeito.disabled = false;
+        document.edit.dataSolicitacao.disabled = false;
+        document.edit.selCodFuncReal.disabled = false;
+        document.edit.serv_realizado.disabled = false;
+        document.edit.dt_hr_comeco.disabled = false;
+        document.edit.dt_hr_realizacao.disabled = false;
        
     }else if(valor == 1){
         
-        document.editServico.selCodFuncAnot.disabled = false;
-        document.editServico.selCodCliente.disabled = false;
-        document.editServico.servASerFeito.disabled = false;
-        document.editServico.dataSolicitacao.disabled = false;
-        document.editServico.selCodFuncReal.disabled = false;
-        document.editServico.serv_realizado.disabled = false;
-        document.editServico.dt_hr_comeco.disabled = false;
-        document.editServico.dt_hr_realizacao.disabled = false;
+        document.edit.selCodFuncAnot.disabled = false;
+        document.edit.selCodCliente.disabled = false;
+        document.edit.servASerFeito.disabled = false;
+        document.edit.dataSolicitacao.disabled = false;
+        document.edit.selCodFuncReal.disabled = false;
+        document.edit.serv_realizado.disabled = false;
+        document.edit.dt_hr_comeco.disabled = false;
+        document.edit.dt_hr_realizacao.disabled = false;
     }
 }
 

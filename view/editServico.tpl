@@ -49,8 +49,8 @@
 
     <div id="btn">
 
-        <input type="button" onclick="habilitar_edit_serv('{$valor}');" value="Editar"/>
-        <input type="submit" value="Salvar"/>
+        <input type="button" onclick="habilitar_edit_serv({$valor});" value="Editar"/>
+        <input type="submit" value="Salvar" onclick="habilitar_edit_serv({$valor});"/>
         <input type="button" onclick="deletar({$e.id});" value="Deletar"/>
     
     </div>

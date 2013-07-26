@@ -19,6 +19,8 @@ if ($v == "") {
 if ($cs->getConluido() == 'S') {
     if ($v == 0) {
         $cs->setId_cliente('NULL');
+        $cs->setId_func_realizou('NULL');
+        $cs->setDtHr_comeco($_POST['dt_hr_comeco']);
         $cs->setServ_realizado($_POST['']);
         $cs->setDtHr_realizacao($_POST['']);
         $cs->setConluido('N');
@@ -26,6 +28,8 @@ if ($cs->getConluido() == 'S') {
     } else {
         $cs->setId_empresa('NULL');
         $cs->setId_func_empr('NULL');
+        $cs->setId_func_realizou('NULL');
+        $cs->setDtHr_comeco($_POST['dt_hr_comeco']);
         $cs->setServ_realizado($_POST['']);
         $cs->setDtHr_realizacao($_POST['']);
         $cs->setConluido('N');

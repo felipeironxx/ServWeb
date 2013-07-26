@@ -43,8 +43,8 @@ if ($v == 0) {
     if (isset($_POST['selCodFuncAnot'], $_POST['selCodEmpr'], $_POST['selCodFuncEmpr'], $_POST['servASerFeito'], 
               $_POST['selCodFuncReal'], $_POST['serv_realizado'], $_POST['dataSolicitacao'], $_POST['dt_hr_comeco'],
               $_POST['dt_hr_realizacao'])){
-        if ($_POST['selCodFuncAnot'] != '' and $_POST['selCodEmpr'] != '' and $_POST['selCodFuncEmpr'] != ''
-                and $_POST['servASerFeito'] != '' and $_POST['dataSolicitacao'] != '') {
+        if ($_POST['selCodFuncAnot']!= 0 and $_POST['selCodEmpr']!= 0 and $_POST['selCodFuncEmpr']!= 0
+                and $_POST['servASerFeito']!= '' and $_POST['dataSolicitacao'] != '') {
 
             $cs->setId_func_anotou($_POST['selCodFuncAnot']);
             $cs->setId_empresa($_POST['selCodEmpr']);
@@ -64,7 +64,7 @@ if ($v == 0) {
 } else if ($v == 1) {
     if (isset($_POST['selCodFuncAnot'], $_POST['selCodCliente'], $_POST['servASerFeito'], $_POST['selCodFuncReal'], 
               $_POST['serv_realizado'], $_POST['dataSolicitacao'], $_POST['dt_hr_comeco'], $_POST['dt_hr_realizacao'])) {
-        if ($_POST['selCodFuncAnot'] != '' and $_POST['selCodCliente'] != '' and $_POST['servASerFeito'] != '' 
+        if ($_POST['selCodFuncAnot']!= 0 and $_POST['selCodCliente']!= 0 and $_POST['servASerFeito']!= '' 
             and $_POST['dataSolicitacao'] != '') {
 
         $cs->setId_func_anotou($_POST['selCodFuncAnot']);
@@ -75,7 +75,7 @@ if ($v == 0) {
         $cs->setId_func_realizou($_POST['selCodFuncReal']);
         $cs->setServ_realizado($_POST['serv_realizado']);
         $cs->setDt_solicitacao($_POST['dataSolicitacao']);
-        $cs->setHr_comeco($_POST['dt_hr_comeco']);
+        $cs->setDtHr_comeco($_POST['dt_hr_comeco']);
         $cs->setDtHr_realizacao($_POST['dt_hr_realizacao']);
         $cs->update();
 

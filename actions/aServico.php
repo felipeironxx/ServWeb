@@ -8,10 +8,10 @@ class aServico extends mServico {
                                                  id_func_empr, serv_solicitado, dt_solicitacao) 
                                    values(%s, %s, %s, %s, '%s', '%s')";
     
-    protected $sqlUpdate = "update servico set id_func_anotou= %s, id_empresa= %s, 
-                                               id_func_empr= %s ,id_cliente=%s , serv_solicitado= '%s', 
+    protected $sqlUpdate = "update servico set id_func_anotou = %s, id_empresa = %s, 
+                                               id_func_empr= %s , id_cliente = %s , serv_solicitado= '%s', 
                                                id_func_realizou=%s, serv_realizado='%s', 
-                                               dt_solicitacao='%s', dt_hr_comeco='%s', dt_hr_realizacao='%s', concluido='%s'
+                                               dt_solicitacao = '%s', dt_hr_comeco = '%s', dt_hr_realizacao = '%s', concluido = '%s'
                             where id = '%s'";
     
     protected $sqlDelete = "delete from servico where id = '%s'";
