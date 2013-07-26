@@ -59,14 +59,62 @@ function validarEnvio(form){
     return ok;
 }
 
+function validarEnvioServico(form){
+    
+    if(form.p[0].checked == true){
+    
+        if (form.selCodFuncAnot.value == 0) {
+            alert ("É preciso selecionar um funcionario válido.");
+            return false;
+        } else if (form.selCodCliente.value == 0) {
+            alert ("É preciso selecionar um cliente válido.");
+            return false;
+        }else if (form.servASerFeito.value == false) {
+            alert ("É preciso preencher o campo de serviço a ser realizado");
+            return false;
+        }
+        else if (form.dataSolicitacao.value == false) {
+            alert ("É preciso preencher o campo de data de solicitação");
+            return false;
+        }
+    }else{
+        if (form.selCodFuncAnot.value == 0) {
+            alert ("É preciso selecionar um funcionario válido.");
+            return false;
+        }
+        else if (form.selCodEmpr.value == 0) {
+            alert ("É preciso selecionar uma empresa válida.");
+            return false;
+        }
+        else if (form.selCodFuncEmpr.value == 0) {
+            alert ("É preciso selecionar um funcionario de empresa válidao");
+            return false;
+        }else if (form.servASerFeito.value == false) {
+            alert ("É preciso preencher o campo de serviço a ser realizado");
+            return false;
+        }
+        else if (form.dataSolicitacao.value == false) {
+            alert ("É preciso preencher o campo de data de solicitação");
+            return false;
+        }
+    }
+
+    return true;
+}
 
 function deal(obj){
+    v = obj;
     if(obj == "pf"){
         document.getElementById('fis').style.display ='block';
         document.getElementById('jur').style.display ='none';
+        document.getElementById('selCodFuncAnot').selectedIndex = 0;
+        document.getElementById('selCodEmpr').selectedIndex = 0;
+        document.getElementById('selCodFuncEmpr').selectedIndex = 0;
     }else if(obj == "pj"){
         document.getElementById('jur').style.display ='block';
         document.getElementById('fis').style.display ='none';
+        document.getElementById('selCodFuncAnot').selectedIndex = 0;
+        document.getElementById('selCodCliente').selectedIndex = 0;
     }
 }
 

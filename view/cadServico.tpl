@@ -8,7 +8,7 @@
         Pessoa Fisica<input type="radio" value="pf" name="p" checked="true" onclick="deal(this.value);">
         Pessoa Juridica<input type="radio" value="pj" name="p" onclick="deal(this.value);"><hr/>
 
-        Funcionario que anotou o serviço: <select name="selCodFuncAnot">
+        Funcionario que anotou o serviço: <select name="selCodFuncAnot" id="selCodFuncAnot">
             <option value="0">Escolha uma opção</option>
             {foreach from=$funclist item=r}
                 <option value="{$r.id}">{$r.nome_funcionario}</option>
@@ -17,7 +17,7 @@
 
         <div id="fis" style="display: block;">
 
-            Cliente que solicitou o serviço: <select name="selCodCliente">
+            Cliente que solicitou o serviço: <select name="selCodCliente" id="selCodCliente">
                 <option value="0">Escolha uma opção</option>
                 {foreach from=$clielist item=r}
                     <option value="{$r.id}">{$r.nome_cliente}</option>
@@ -26,14 +26,14 @@
         </div>
 
         <div id="jur" style="display: none;">   
-            Empresa que solicitou o serviço: <select name="selCodEmpr">
+            Empresa que solicitou o serviço: <select name="selCodEmpr" id="selCodEmpr">
                 <option value="0">Escolha uma opção</option>
                 {foreach from=$emplist item=r}
                     <option value="{$r.id}">{$r.nome_empresa}</option>
                 {/foreach}
             </select><br>
 
-            Funcionario solicitante: <select name="selCodFuncEmpr">
+            Funcionario solicitante: <select name="selCodFuncEmpr" id="selCodFuncEmpr">
                 <option value="0">Escolha uma opção</option>
                 {foreach from=$funcemprlist item=r}
                     <option value="{$r.id}">{$r.nome_func_empr}</option>
