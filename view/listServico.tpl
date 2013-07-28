@@ -19,6 +19,7 @@
         </select>
         <input type="text" name="pesquisa"><input type="submit" value="Pesquisar">
 
+        <input type="button" value="Relatorios" onclick="win('relatoriosServico.php',600,420);">
     </form>
 
 </div><br>
