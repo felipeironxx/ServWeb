@@ -26,19 +26,20 @@
         </div>
 
         <div id="jur" style="display: none;">   
-            Empresa que solicitou o serviço: <select name="selCodEmpr" id="selCodEmpr">
+            Empresa que solicitou o serviço: <select name="selCodEmpr" id="selCodEmpr" onchange="atualizarFuncEmpr();">
                 <option value="0">Escolha uma opção</option>
                 {foreach from=$emplist item=r}
                     <option value="{$r.id}">{$r.nome_empresa}</option>
                 {/foreach}
             </select><br>
-
-            Funcionario solicitante: <select name="selCodFuncEmpr" id="selCodFuncEmpr">
-                <option value="0">Escolha uma opção</option>
-                {foreach from=$funcemprlist item=r}
-                    <option value="{$r.id}">{$r.nome_func_empr}</option>
-                {/foreach}
-            </select><br>
+            <div id="funcempr">
+                Funcionario solicitante: <select name="selCodFuncEmpr" id="selCodFuncEmpr">
+                    <option value="0">Escolha uma opção</option>
+                    {foreach from=$funcemprlist item=r}
+                        <option value="{$r.id}">{$r.nome_func_empr}</option>
+                    {/foreach}
+                </select><br>
+            </div>
         </div>
 
         Serviço a ser feito: <br><textarea name="servASerFeito" id="servASerFeito" rows="5" cols="70" ></textarea><br>
