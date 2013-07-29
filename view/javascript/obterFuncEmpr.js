@@ -1,14 +1,14 @@
 window.onload = function(){
-    var selCodEmpr = getElementById("selCodEmpr");
+    var selCodEmpr = document.getElementById("selCodEmpr");
     selCodEmpr.onchange = function() {exibeFuncEmpr(selCodEmpr);}
 }
 
 function exibeFuncEmpr(selCodEmpr){
-    if(selCodEmpr == NULL){
+    if(selCodEmpr == null){
         return;
     }
     selecionado = selCodEmpr.options[selCodEmpr.selectedIndex].value;
-    var url="busca_func_empr.php?id="+encodeURIComponet(selecionado);
+    var url="busca_func_empr.php?id="+encodeURIComponent(selecionado);
     requisicaoHTTP("GET", url, true);
 }
    
