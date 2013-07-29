@@ -15,6 +15,7 @@ function exibeFuncEmpr(selCodEmpr){
 
 function tratarDados(dados){
     var resposta = document.getElementById("funcempr");
+    alert(resposta);
     resposta.innerHTML = dados;
    
 }

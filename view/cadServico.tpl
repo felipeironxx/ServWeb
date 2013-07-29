@@ -34,10 +34,7 @@
             </select><br>
 
             Funcionario solicitante: <select name="selCodFuncEmpr" id="selCodFuncEmpr">
-                <option value="0">Escolha uma opção</option>
-                {foreach from=$funcemprlist item=r}
-                    <option value="{$r.id}">{$r.nome_func_empr}</option>
-                {/foreach}       
+                <option value="0">Escolha uma opção</option>  
                 <span id="funcempr"></span>
             </select><br>
 

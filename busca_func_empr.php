@@ -7,12 +7,11 @@ require_once 'core/FuncEmpr.php';
 $cfe = new FuncEmpr();
 
 $id = $_GET['id'];
-$cfe->select("and id_empresa = '{$id}'");
 
 if (isset($cfe)) {
-    foreach ($cfe as $rid => $nome_func_empr) {
+    foreach ($cfe->select("and id_empresa = '{$id}'") as $menu) {
 
-        echo "<option value=" . $rid . ">" . $nome_func_empr . "</option>";
+        echo "<option value=" . $menu['id'] . ">" . $menu['nome_func_empr'] . "</option>";
     }
 }
 
