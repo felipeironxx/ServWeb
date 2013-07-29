@@ -11,9 +11,6 @@
         <script type="text/javascript" src="inc/fancybox/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
         <link type="text/css" rel="stylesheet" href="inc/fancybox/fancybox/jquery.fancybox-1.3.4.css" media="screen"/>
 
-        <!-- Biblioteca Ajax -->
-        <script type="text/javascript" src="view/javascript/bibliotecaAjax.js"></script>
-
         <!-- Nossa funca ao abrir a janela -->
         <script type="text/javascript" src="view/javascript/general.js"></script>
     </head>

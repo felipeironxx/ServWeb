@@ -3,7 +3,7 @@
 <div id="formalirio1">
     <h3>Cadastro do Serviço</h3>
 
-    <form name="cad" id="cad" method="post" onload="document.getElementById('fis').style.display ='block';" onsubmit="return validarEnvioServico(this);">
+    <form name="cad" id="cad" method="post" action="javascript:void%200" onload="document.getElementById('fis').style.display ='block';" onsubmit="return validarEnvioServico(this);">
 
         Pessoa Fisica<input type="radio" value="pf" name="p" checked="true" onclick="deal(this.value);">
         Pessoa Juridica<input type="radio" value="pj" name="p" onclick="deal(this.value);"><hr/>
@@ -26,20 +26,21 @@
         </div>
 
         <div id="jur" style="display: none;">   
-            Empresa que solicitou o serviço: <select name="selCodEmpr" id="selCodEmpr" onchange="atualizarFuncEmpr();">
+            Empresa que solicitou o serviço: <select name="selCodEmpr" id="selCodEmpr">
                 <option value="0">Escolha uma opção</option>
                 {foreach from=$emplist item=r}
                     <option value="{$r.id}">{$r.nome_empresa}</option>
                 {/foreach}
             </select><br>
-            <div id="funcempr">
-                Funcionario solicitante: <select name="selCodFuncEmpr" id="selCodFuncEmpr">
-                    <option value="0">Escolha uma opção</option>
-                    {foreach from=$funcemprlist item=r}
-                        <option value="{$r.id}">{$r.nome_func_empr}</option>
-                    {/foreach}
-                </select><br>
-            </div>
+
+            Funcionario solicitante: <select name="selCodFuncEmpr" id="selCodFuncEmpr">
+                <option value="0">Escolha uma opção</option>
+                {foreach from=$funcemprlist item=r}
+                    <option value="{$r.id}">{$r.nome_func_empr}</option>
+                {/foreach}       
+                <span id="funcempr"></span>
+            </select><br>
+
         </div>
 
         Serviço a ser feito: <br><textarea name="servASerFeito" id="servASerFeito" rows="5" cols="70" ></textarea><br>

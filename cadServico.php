@@ -17,21 +17,7 @@ $cfe = new FuncEmpr();
 $sm->assign('clielist', $c->select());
 $sm->assign('emplist', $ce->select());
 $sm->assign('funclist', $cf->select());
-
-//if (isset($_GET['id'])) {
-//    $id = $_GET['id'];
-    $sm->assign('funcemprlist', $cfe->select(/*"and id = '{$id}'"*/));
-//    $funcemprlist = '$funcemprlist';
-//    $rid = '{$r.id}';
-//    $bne = '{$r.nome_func_empr}';
-//
-//    print("Funcionario solicitante: <select name = 'selCodFuncEmpr' id = 'selCodFuncEmpr'>");
-//    print("<option value = '0' >Escolha uma opção</option>");
-//    print("'{foreach from = $funcemprlist item = r}'");
-//    print("<option value = '$rid'>$rne</option>");
-//    print("{/foreach}");
-//    print("</select><br>");
-//}
+//$sm->assign('funcemprlist', $cfe->select());
 
 
 if ($_POST['p'] == "pf") {

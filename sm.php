@@ -1,6 +1,7 @@
 <?php
+
 /*
- Este arquivo configura a inicialização do smarty
+  Este arquivo configura a inicialização do smarty
  */
 
 require_once 'inc/smarty/libs/Smarty.class.php';
